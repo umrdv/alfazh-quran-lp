@@ -118,11 +118,24 @@
             <article class="flex flex-col relative w-full gap-6 px-4 bg-yellow-700/80 p-6 rounded-3xl mt-20">
                 <img src="/assets/alfazh-tajwid-quran.png" alt="Buku Alfazh" class="absolute -top-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-52 rounded-xl border-4 border-white shadow-md">
                 <p class="mt-24 text-white">Membantu kamu belajar membaca dengan benar melalui panduan audio perkata dan tajwid praktis yang mudah diikuti, kapan pun dibutuhkan.</p>
-                <div class="flex h-16 items-center gap-2">
-                    <img src="/assets/qr_code.png" alt="QR Code" class="h-20">
-                    <img src="/assets/text-btn-scan.png" alt="Scan QR" class="h-[77px] py-0.5 w-full">
+                <div class="flex items-center gap-2">
+                    <img src="/assets/qr_code.png" alt="QR Code" class="size-24 grow-0">
+                    <div class="bg-white/80 p-5 grow-1 rounded-xl text-start relative">
+                        <p class="font-bold">Cukup Scan QR Code</p>
+                        <p class="text-gray-500">-> langsung belajar.</p>
+                    <div class="absolute bottom-3 right-4">
+                        <img src="/assets/icon-link-scan.png" alt="Icon Audio" class="h-5 w-5">
+                    </div>
+                    </div>
                 </div>
-                <img src="/assets/appstore.png" alt="App Store" class="h-full">
+                <div class="flex gap-2 w-full items-center justify-center mt-4 px-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.umrona.app" alt="Umrona App Download on Play Store">
+                        <img src="/assets/download-playstore.png" alt="Umrona App Download on Play Store">
+                    </a>
+                    <a href="https://apps.apple.com/us/app/umrona-muslim-super-app/id6466742218" alt="Umrona App download on App Store">
+                        <img src="/assets/download-appstore.png" alt="Umrona App download on App Store">
+                    </a>
+                </div>
             </article>
         </div>
     </section>
@@ -187,10 +200,23 @@
     </section>
 
     <section class="flex flex-col items-center text-center px-3 pt-10 bg-white">
+    </section>
+
+    <section class="flex flex-col items-center text-center px-3 pt-10 bg-white">
         <div class="max-w-md mx-auto w-full gap-4 flex flex-col">
             <h2 class="text-2xl font-bold">Telah Digunakan dan Direkomendasikan</h2>
             <h3 class="text-gray-500 text-base font-normal mb-5">Digunakan oleh pembelajar Al-Qur’an dari berbagai usia dan direkomendasikan oleh berbagai tokoh & pengajar Al-Qur’an.</h3>
             
+            <div class="w-full max-w-4xl mx-auto mb-10">
+                <iframe 
+                    class="w-full aspect-video rounded-xl shadow-lg" 
+                    src="https://www.youtube.com/embed/94U1IlfklUI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
             <div class="swiper mySwiper w-full">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
