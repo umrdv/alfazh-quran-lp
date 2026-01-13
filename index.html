@@ -60,7 +60,7 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=806685109063714&ev=PageView&noscript=1"
     /></noscript>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> 
 </head>
 <body class="text-gray-800 font-sans antialiased w-full md:max-w-md mx-auto">
 
@@ -71,12 +71,29 @@
             <p class="text-base font-normal">Dengan Alfazh Quran, belajar membaca Al-Qur’an jadi lebih jelas, praktis, dan bisa dilakukan mandiri tanpa bingung harus mulai dari mana.</p>
             <img src="/assets/f1.png" alt="Aplikasi Alfazh" class="rounded-3xl w-full">
             <div class="flex w-full gap-4">
-                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">
-                    Pesan Sekarang
-                </a>
-                <a href="https://catalog.umrona.com" class="w-full border border-amber-700 font-bold text-amber-700 text-lg py-3 px-2 rounded-xl hover:bg-yellow-50 transition">
-                    Mulai Belajar
-                </a>
+                <button command="show-modal" commandfor="dialog" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</button>
+                <el-dialog>
+                    <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                        <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+                            <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                            <div class="bg-white p-6 grid grid-cols-4 place-items-center gap-2">
+                                <a href="https://vt.tokopedia.com/t/ZSHEPcaHKP6d9-V1Dgd/" class="transition place-content-center">
+                                    <img src="/assets/tiktok-logo.png" alt="Tiktok Alfazh" class="w-16">
+                                </a>
+                                <a href="https://www.tokopedia.com/lafazh-books" class="transition place-content-center">
+                                    <img src="/assets/tokped-logo.png" alt="Tokopedia Alfazh" class="w-20">
+                                </a>
+                                <a href="https://shopee.co.id/lafazhbooks" class="transition place-content-center">
+                                    <img src="/assets/shopee-logo.png" alt="Shopee Alfazh" class="w-[3.3rem]">
+                                </a>
+                                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="transition place-content-center">
+                                    <img src="/assets/logo-wa.png" alt="Shopee Alfazh" class="w-16 h-16">
+                                </a>
+                            </div>
+                        </el-dialog-panel>
+                    </dialog>
+                </el-dialog>
             </div>
         </div>
     </header>
@@ -259,9 +276,8 @@
                 Sekali beli, bisa digunakan berulang untuk belajar mandiri dengan lebih terarah.
             </h3>
             <div class="flex w-full gap-4 mt-5">
-                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">
-                    Pesan Sekarang
-                </a>
+                <button command="show-modal" commandfor="dialog" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</button>
+                
                 <a href="https://catalog.umrona.com" class="w-full border border-amber-700 font-bold text-amber-700 text-lg py-3 px-2 rounded-xl hover:bg-yellow-50 transition">
                     Mulai Belajar
                 </a>
