@@ -1,328 +1,284 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfazh Quran - Belajar Mengaji Praktis & Terarah</title>
+    <title>Alfazh Quran - Belajar Mengaji Lebih Mudah</title>
     
-    <meta name="description" content="Solusi belajar baca Al-Qur'an mandiri yang praktis. Dilengkapi fitur audio per kata, panduan tajwid visual, dan scan QR Code. Cocok untuk pemula hingga mahir.">
-    <meta name="keywords" content="Alfazh Quran, belajar mengaji, belajar alquran, tajwid praktis, belajar ngaji pemula, quran audio per kata, umrona, mushaf tajwid">
-    <meta name="author" content="Umrona">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://umrona.com/" />
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Alfazh Quran - Belajar Mengaji Praktis & Terarah">
-    <meta property="og:description" content="Belajar Al-Qur'an jadi lebih mudah tanpa bingung mulai dari mana. Fitur Audio Per Kata & Tajwid Visual.">
-    <meta property="og:url" content="https://umrona.com/">
-    <meta property="og:site_name" content="Alfazh Quran by Umrona">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:image" content="/assets/f1.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Alfazh Quran - Cara Mudah Belajar Mengaji">
-    <meta name="twitter:description" content="Metode belajar Al-Qur'an mandiri dengan audio per kata. Pesan sekarang!">
-    <meta name="twitter:image" content="/assets/f1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <meta name="facebook-domain-verification" content="0x0mnhk9lo9d15ykge4pdqkxqwmyme" />
+    
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '806685109063714');
-    fbq('track', 'PageView');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=806685109063714&ev=PageView&noscript=1"
-    /></noscript>
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '806685109063714');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=806685109063714&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>  -->
+    <style>
+        .bg-pinstripe {
+            background-color: transparent;
+            background-image: linear-gradient(90deg, rgba(197, 163, 101, 0.05) 10px, transparent 10px);
+            background-size: 40px 100%;
+        }
+        .floating-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-card:hover {
+            transform: translateY(-5px);
+            z-index: 20;
+        }
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+    </style>
 </head>
-<body class="text-gray-800 font-sans antialiased w-full md:max-w-md mx-auto">
+<body class="font-sans antialiased">
+    <div class="max-w-lg mx-auto">
+        <header class="relative bg-linear-to-r/oklch from-[#FFB240B2]/10 via-white to-[#FFB240B2]/20 bg-center bg-repeat-x pt-10 min-h-[926px]">
+            <div class="absolute inset-0 bg-pinstripe pointer-events-none z-0"></div>
+            <a href="/" aria-label="Beranda Alfazh Quran">
+                <img src="/assets/logo.png" alt="Logo Alfazh Quran" width="160" height="auto" class="w-40 mx-auto">
+            </a>
 
-    <header class="flex flex-col bg-linear-to-b from-orange-100 to-white items-center text-center px-3 gap-20">
-        <img src="/assets/logo.png" alt="Logo Alfazh Quran & Umrona" class="w-34 mt-8 mb-3">
-        <div class="flex flex-col w-full gap-10">
-            <h1 class="text-3xl font-bold">Belajar Baca Al-Qur’an Sekarang <span class="text-amber-600/90">Jadi Lebih Mudah & Terarah</span> </h1>
-            <p class="text-base font-normal">Dengan Alfazh Quran, belajar membaca Al-Qur’an jadi lebih jelas, praktis, dan bisa dilakukan mandiri tanpa bingung harus mulai dari mana.</p>
-            <img src="/assets/f1.png" alt="Aplikasi Alfazh" class="rounded-3xl w-full">
-            <div class="flex w-full gap-4">
-                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</a>
-                <!-- <button command="show-modal" commandfor="dialog" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</button>
-                <el-dialog>
-                    <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
-                        <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-                            <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
-                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
-                            <div class="bg-white p-6 grid grid-cols-4 place-items-center gap-2">
-                                <a href="https://vt.tokopedia.com/t/ZSHEPcaHKP6d9-V1Dgd/" class="transition place-content-center">
-                                    <img src="/assets/tiktok-logo.png" alt="Tiktok Alfazh" class="w-16">
-                                </a>
-                                <a href="https://www.tokopedia.com/lafazh-books" class="transition place-content-center">
-                                    <img src="/assets/tokped-logo.png" alt="Tokopedia Alfazh" class="w-20">
-                                </a>
-                                <a href="https://shopee.co.id/lafazhbooks" class="transition place-content-center">
-                                    <img src="/assets/shopee-logo.png" alt="Shopee Alfazh" class="w-[3.3rem]">
-                                </a>
-                                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="transition place-content-center">
-                                    <img src="/assets/logo-wa.png" alt="Shopee Alfazh" class="w-16 h-16">
-                                </a>
+            <div class="container mx-auto px-4 relative z-10 text-center pt-8">
+                <div class="max-w-3xl mx-auto space-y-5 mb-12">
+                    <h1 class="text-3xl font-bold bg-gradient-to-r from-[#B7831F] to-[#FFB240] text-transparent bg-clip-text inline-block">
+                        Mau Ngaji <br>
+                        Lebih Lancar & Benar <br>
+                        Tanpa Takut Salah?
+                    </h1>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-2xl mx-auto">
+                        <span class="text-[#B7831F] font-semibold">Alfazh Quran</span> bantu anda lebih mudah, dan percaya diri tanpa takut salah lagi.
+                    </p>
+                    <p class="text-gray-600 text-sm max-w-xl mx-auto">
+                        Dengan panduan tajwid yang super lengkap, bukan sekedar warna dan teori saja, tapi sudah ada contoh melalui audio per kata.
+                    </p>
+                    <div class="pt-4">
+                        <a href="https://wa.me/+628139871659?text=Assalamualaikum,%20mohon%20info%20pembelian%20produk%20Alfazh%20Al-Qur%27an" class="animate-bounce inline-flex items-center gap-3 bg-linear-to-r from-[#37765F] via-[#37765F] to-[#FEB140] text-white px-4 py-3 rounded-full font-bold shadow-lg shadow-brand-green/20 hover:bg-green-900 transition transform hover:scale-105 group">
+                            <span>Konsultasi ke Admin (Gratis)</span>
+                            <div class="w-6 h-6 bg-white text-[#37765F] rounded-full flex items-center justify-center text-xs group-hover:rotate-45 transition duration-300">
+                                <i class="fa-solid fa-arrow-right"></i>
                             </div>
-                        </el-dialog-panel>
-                    </dialog>
-                </el-dialog> -->
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
 
-    <section class="flex flex-col items-center text-center px-3 gap-20 mt-16">
-        <div class="flex flex-col w-full gap-10">
-            <h2 class="text-2xl font-bold">Masih ingin belajar Al-Qur’an, tapi terhambat karena:</h2>
-            <div class="flex flex-wrap w-full gap-6 px-4">
-                
-                <figure class="w-full m-0">
-                    <div class="bg-gradient-to-b w-full from-orange-200 to-white rounded-xl pt-2 mb-2 text-center">
-                        <img src="/assets/bingung-2.png" alt="Ilustrasi Bingung" class="h-full w-full">
-                    </div>
-                    <figcaption>Bingung harus mulai dari mana</figcaption>
-                </figure>
-
-                <figure class="w-full m-0">
-                    <div class="bg-gradient-to-b w-full from-orange-200 to-white rounded-xl pt-2 mb-2 text-center">
-                        <img src="/assets/bingung-1.png" alt="Ilustrasi Waktu" class="h-full w-full">
-                    </div>
-                    <figcaption>Tidak punya waktu & tidak ada guru yang mendampingi</figcaption>
-                </figure>
-
-                <figure class="w-full m-0">
-                    <div class="bg-gradient-to-b w-full from-orange-200 to-white rounded-xl pt-2 mb-2 text-center">
-                        <img src="/assets/bingung-3.png" alt="Ilustrasi Ragu" class="h-full w-full pr-10">
-                    </div>
-                    <figcaption>Kurang yakin dengan bacaan sendiri</figcaption>
-                </figure>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="flex flex-col items-center text-center px-3 gap-20 mt-16">
-        <div class="flex flex-col w-full gap-10">
-            <h2 class="text-2xl font-bold mb-28"><span class="text-amber-600/90">Alfazh Quran</span> hadir sebagai <span class="text-amber-600/90">solusi</span> belajar Al-Qur’an yang <span class="text-amber-600/90">praktis dan terarah</span>.</h2>
-            <article class="flex flex-col relative w-full gap-6 px-4 bg-yellow-700/80 p-6 rounded-3xl mt-20">
-                <img src="/assets/alfazh-tajwid-quran.png" alt="Buku Alfazh" class="absolute -top-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-52 rounded-xl border-4 border-white shadow-md">
-                <p class="mt-24 text-white">Membantu kamu belajar membaca dengan benar melalui panduan audio perkata dan tajwid praktis yang mudah diikuti, kapan pun dibutuhkan.</p>
-                <div class="flex items-center gap-2">
-                    <img src="/assets/qr_code.png" alt="QR Code" class="size-24 grow-0">
-                    <div class="bg-white/80 p-5 grow-1 rounded-xl text-start relative">
-                        <p class="font-bold">Cukup Scan QR Code</p>
-                        <p class="text-gray-500">-> langsung belajar.</p>
-                    <div class="absolute bottom-3 right-4">
-                        <img src="/assets/icon-link-scan.png" alt="Icon Audio" class="h-5 w-5">
-                    </div>
-                    </div>
-                </div>
-                <div class="flex gap-2 w-full items-center justify-center mt-4 px-4">
-                    <a href="https://play.google.com/store/apps/details?id=com.umrona.app" alt="Umrona App Download on Play Store">
-                        <img src="/assets/download-playstore.png" alt="Umrona App Download on Play Store">
-                    </a>
-                    <a href="https://apps.apple.com/us/app/umrona-muslim-super-app/id6466742218" alt="Umrona App download on App Store">
-                        <img src="/assets/download-appstore.png" alt="Umrona App download on App Store">
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="flex flex-col px-3 gap-10 mt-16">
-        <h2 class="text-2xl font-bold text-center">Kenapa Alfazh Quran berbeda?</h2>
-        <div class="flex flex-col w-full gap-10 px-8">
-            
-            <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl">
-                <img src="/assets/icon-audio.png" alt="Icon Audio" class="h-10 w-10">
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-base m-0">Memiliki fitur audio per kata,</h3>
-                    <p class="text-sm text-gray-500">bukan hanya per ayat, sehingga setiap lafazh bisa dipelajari dan ditirukan dengan lebih tepat.</p>
-                </div>
-                <div class="bg-gradient-to-t from-orange-200 to-white rounded-xl pt-8">
-                    <img src="/assets/audio.png" alt="Fitur Audio" class="h-full w-full">
-                </div>
-            </article>
-
-            <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl">
-                <img src="/assets/icon-book.png" alt="Icon Buku" class="h-10 w-10">
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-base m-0">Panduan tajwid terlihat,</h3>
-                    <p class="text-sm text-gray-500">bukan hanya sekedar teori, tapi ada contoh audio yang jelas dan mudah dipahami.</p>
-                </div>
-                <div class="bg-gradient-to-t from-orange-200 to-white rounded-xl pt-8">
-                    <div class="w-full h-full relative">
-                        <img src="/assets/ss-tajwid2.png" alt="Screenshot Tajwid" class="h-full w-full">
-                        <div class="w-full absolute mx-auto -top-10">
-                            <img src="/assets/ss-tajwid-detail.png" alt="Detail Tajwid" class="w-1/2 mx-auto">
+            <div class="relative w-full mx-auto mt-28">
+                <img src="/assets/model-1.png" width="400" height="500" class="bottom-0 relative w-full z-20" alt="Tampilan Aplikasi Alfazh Quran">
+                <div class="absolute -top-23 w-full z-10">
+                    <!-- <img src="/assets/app-ss.png" class="w-full" alt="App Feature"> -->
+                    <div class="swiper appSS">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/assets/app-ss-1.png" loading="lazy" class="h-80 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/app-ss-2.png" loading="lazy" class="h-80 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/app-ss-3.png" loading="lazy" class="h-80 md:h-[400px]" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/app-ss-4.png" loading="lazy" class="h-80 md:h-[400px]" />
                         </div>
                     </div>
                 </div>
-            </article>
-
-            <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl">
-                <img src="/assets/icon-repeater.png" alt="Icon Repeater" class="h-10 w-10">
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-base m-0">Bacaan & audio bisa diulang kapan saja,</h3>
-                    <p class="text-sm text-gray-500">tanpa bergantung pada guru, sehingga belajar jd lebih fleksibel dan mandiri.</p>
                 </div>
-                <div class="bg-gradient-to-t from-orange-200 to-white rounded-xl pt-8">
-                    <div class="w-full h-full relative">
-                        <img src="/assets/ss-repeater.png" alt="Screenshot Repeater" class="h-full w-full">
-                    </div>
-                </div>
-            </article>
+            </div>
+        </header>
 
-            <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl">
-                <img src="/assets/icon-scan.png" alt="Icon Scan" class="h-10 w-10">
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-base m-0">QR Code setiap halaman,</h3>
-                    <p class="text-sm text-gray-500">langsung terhubung ke audio beserta tampilan halaman mushaf.</p>
-                </div>
-                <div class="bg-gradient-to-t from-orange-200 to-white rounded-xl pt-8">
-                    <div class="w-full h-full relative">
-                        <img src="/assets/ss-scan-qrcode.png" alt="Screenshot Scan" class="h-full w-full">
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="flex flex-col items-center text-center px-3 pt-10 bg-white">
-    </section>
-
-    <section class="flex flex-col items-center text-center px-3 pt-10 bg-white">
-        <div class="max-w-md mx-auto w-full gap-4 flex flex-col">
-            <h2 class="text-2xl font-bold">Telah Digunakan dan Direkomendasikan</h2>
-            <h3 class="text-gray-500 text-base font-normal mb-5">Digunakan oleh pembelajar Al-Qur’an dari berbagai usia dan direkomendasikan oleh berbagai tokoh & pengajar Al-Qur’an.</h3>
-            
-            <div class="w-full max-w-4xl mx-auto mb-10">
-                <iframe 
-                    class="w-full aspect-video rounded-xl shadow-lg" 
-                    src="https://www.youtube.com/embed/94U1IlfklUI" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+        <section class="flex flex-col px-5 gap-10 py-12">
+            <div class="w-full px-5 text-center space-y-5">
+                <h2 class="text-2xl font-bold text-center">Kenapa Banyak Orang Beralih ke Alfazh?</h2>
+                <p class="text-base text-gray-600">bukan hanya per ayat, sehingga setiap lafazh bisa dipelajari dan ditirukan dengan lebih tepat.</p>
             </div>
 
+            <div class="flex flex-col w-full gap-10 px-8">
+                <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl hover-card-up">
+                    <img src="/assets/icon-feature-1.png" alt="" class="h-10 w-10 -rotate-12 animate-bounce" loading="lazy">
+                    <div class="space-y-2">
+                        <h3 class="font-semibold text-base m-0">Aplikasi Belajar Lengkap</h3>
+                        <p class="text-sm text-gray-600">Gratis aplikasi premium, tanpa iklan, yang dapat mendukung ibadah harian menjadi lebih fokus.</p>
+                    </div>
+                    <img src="/assets/feature-1.png" alt="Preview Aplikasi Lengkap" class="h-full w-full rounded-md" loading="lazy">
+                </article>
+                <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl hover-card-up">
+                    <img src="/assets/icon-feature-2.png" alt="" class="h-10 w-10 rotate-12 animate-bounce" loading="lazy">
+                    <div class="space-y-2">
+                        <h3 class="font-semibold text-base m-0">Bacaan Audio Guru Per Kata</h3>
+                        <p class="text-sm text-gray-600">Tinggal scan / klik -> dengarkan langsung contoh bacaan yang benar.</p>
+                    </div>
+                    <img src="/assets/feature-2.png" alt="Preview Fitur Audio" class="h-full w-full rounded-md" loading="lazy">
+                </article>
+
+                <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl hover-card-up">
+                    <img src="/assets/icon-feature-3.png" alt="" class="h-10 w-10 animate-bounce" loading="lazy">
+                    <div class="space-y-2">
+                        <h3 class="font-semibold text-base m-0">Tajwid Warna</h3>
+                        <p class="text-sm text-gray-600">Ikuti panduan warna disetiap huruf untuk dapat membaca dengan benar sesuai kaidah.</p>
+                    </div>
+                    <img src="/assets/feature-3.png" alt="Preview Tajwid Warna" class="h-full w-full rounded-md" loading="lazy">
+                </article>
+
+                <article class="flex flex-col relative w-full gap-6 bg-orange-100/60 p-10 rounded-xl hover-card-up">
+                    <img src="/assets/icon-feature-4.png" alt="" class="h-10 w-10 -rotate-12 animate-bounce" loading="lazy">
+                    <div class="space-y-2">
+                        <h3 class="font-semibold text-base m-0">Dipercaya Banyak Jamaah</h3>
+                        <p class="text-sm text-gray-600">Telah digunakan oleh berbagai kalangan dan membantu banyak orang lancar baca Al Quran.</p>
+                    </div>
+                    <img src="/assets/feature-4.png" alt="Komunitas Pengguna" class="h-full w-full rounded-md" loading="lazy">
+                </article>
+            </div>
+        </section>
+
+        <section class="w-full flex flex-col items-center justify-center px-5 py-12 gap-12 bg-gradient-to-tr from-emerald-50/50 via-orange-50/50 to-orange-50/50">
+            <div class="text-center">
+                <h2 class="text-[23px] font-bold ">
+                    Alfazh Qur’an <br>
+                    Berizin Resmi & Telah Dipercaya
+                </h2>
+            </div>
+
+            <div class="relative flex items-center justify-center">
+                <a href="">
+                    <img src="assets/logo-shopee-dan-kemenag.png" alt="Logo Kemenag & shopee" loading="lazy" width="299" height="132" class="w-80 h-32 object-contain drop-shadow-md">
+                </a>
+            </div>
+            <div class="w-full space-y-4">    
+                <div class="bg-white rounded-2xl p-6 shadow-sm shadow-orange-100/50 w-full hover:shadow-md transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-900">Berizin Resmi dan Aman</h3>
+                    <p class="text-gray-600 text-sm font-medium">Telah Tashih dan berizin Kemenag RI.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm shadow-orange-100/50 w-full hover:shadow-md transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-900">Dipercaya Banyak Jamaah</h3>
+                    <p class="text-gray-600 text-sm font-medium">Digunakan 50.000+ muslim di seluruh Indonesia.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm shadow-orange-100/50 w-full hover:shadow-md transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-900">Rating Tinggi di Shopee</h3>
+                    <p class="text-gray-600 text-sm font-medium">Bintang 5 testimoni pelanggan Shopee.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10">
             <div class="swiper mySwiper w-full">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                         <div class="h-full rounded-lg">
-                            <img src="/assets/testimoni-tgb-dan-kang-abik.png" alt="Testimoni 1" class="h-full w-full object-cover">
+                    <div class="swiper-slide space-y-4">
+                        <div class="h-full rounded-lg">
+                            <img src="/assets/testimoni-1.png" alt="Testimoni Subekti" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="px-10 py-8 bg-orange-100 rounded-xl">
+                            <p class="text-gray-600 text-sm font-medium mb-14">
+                                Dulu suka malu dan ragu kalo ngaji keras-keras karna merasa belum yakin dengan bacaan sendiri, tapi sekarang sudah lebih percaya diri karna terbantu sekali dengan panduan audio per kata nya.
+                            </p>
+
+                            <div class="flex w-full justify-between">
+                                <p class="text-gray-600 text-sm">Subekti</p>
+                                <img src="/assets/icon-testimoni.png" alt="" class="h-5 w-5">
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide space-y-4">
                         <div class="h-full rounded-lg">
-                           <img src="/assets/testimoni-2.png" alt="Testimoni 2" class="h-full w-full object-cover">
-                       </div>
-                   </div>
-                   <div class="swiper-slide">
-                        <div class="h-full rounded-lg">
-                           <img src="/assets/testimoni-3.png" alt="Testimoni 3" class="h-full w-full object-cover">
+                            <img src="/assets/testimoni-2.png" alt="Testimoni Widya" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="px-10 py-8 bg-orange-100 rounded-xl">
+                            <p class="text-gray-600 text-sm font-medium mb-14">
+                                Sebagai ibu, saya ingin membaca Al-Qur’an dengan benar dan menjadi contoh untuk anak. Alfazh Quran memudahkan saya belajar di sela kesibukan lewat audio per kata. Saya bisa mendengarkan, menirukan, bahkan belajar bersama anak di rumah.
+                            </p>
+
+                            <div class="flex w-full justify-between">
+                                <p class="text-gray-600 text-sm">Widya</p>
+                                <img src="/assets/icon-testimoni.png" alt="" class="h-5 w-5">
+                            </div>
                         </div>
                     </div>
-                   <div class="swiper-slide">
+                    <div class="swiper-slide space-y-4">
                         <div class="h-full rounded-lg">
-                           <img src="/assets/testimoni-4.png" alt="Testimoni 4" class="h-full w-full object-cover">
+                        <img src="/assets/testimoni-3.png" alt="Testimoni Iqbal" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="px-10 py-8 bg-orange-100 rounded-xl">
+                            <p class="text-gray-600 text-sm font-medium mb-14">
+                                Sebagai mahasiswa, saya ingin bisa membaca Al-Qur’an dengan benar, tapi sering tidak konsisten karena metode yang ribet. Alfazh Quran membantu lewat audio per kata yang jelas. Belajar jadi lebih praktis dan fleksibel di tengah kesibukan.
+                            </p>
+
+                            <div class="flex w-full justify-between items-center">
+                                <p class="text-gray-600 text-sm">Iqbal</p>
+                                <img src="/assets/icon-testimoni.png" alt="" class="h-5 w-5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide space-y-4">
+                        <div class="h-full rounded-lg">
+                            <img src="/assets/testimoni-4.png" alt="Testimoni Doni" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="px-10 py-8 bg-orange-100 rounded-xl">
+                            <p class="text-gray-600 text-sm font-medium mb-14">
+                                Di usia yang tidak lagi muda, metode belajar yang penuh teori terasa sulit. Alfazh Quran dengan audio per kata membantu saya membaca setiap lafaz dengan benar, tinggal dengar dan tirukan, seperti dibimbing langsung.
+                            </p>
+                            <div class="flex w-full justify-between items-center">
+                                <p class="text-gray-600 text-sm">Doni</p>
+                                <img src="/assets/icon-testimoni.png" alt="" class="h-5 w-5">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </div>
-    </section>
-    
-    <section class="flex flex-col items-center text-center px-3 py-10 bg-white">
-        <div class="max-w-md mx-auto w-full gap-4 flex flex-col">
-            <div>
-                <div>
-                    <span class="text-gray-500 font-semibold">Harga Normal</span>
-                    <span class="line-through text-red-600 font-semibold">Rp150.000</span>
+        </section>
+
+        <section>
+            <div class="z-10 text-center pt-10">
+                <div class="max-w-3xl mx-auto space-y-2 mb-12">
+                    <h2 class="text-3xl font-extrabold bg-gradient-to-r from-[#B7831F] to-[#FFB240] text-transparent bg-clip-text inline-block">
+                        Investasi Akhirat yang Menenangkan Hati
+                    </h2>
+                    <p class="text-gray-600 px-10 text-sm mx-auto">
+                        Bukan sekadar mushaf, tapi pendamping ibadah seumur hidup
+                    </p>
+                    <div class="pt-4">
+                        <a href="https://wa.me/+628139871659?text=Assalamualaikum,%20mohon%20info%20pembelian%20produk%20Alfazh%20Al-Qur%27an" class="inline-flex items-center gap-3 bg-linear-to-r from-[#37765F] via-[#37765F] to-[#FEB140] text-white px-4 py-3 rounded-full font-bold shadow-lg shadow-brand-green/20 hover:bg-green-900 transition transform hover:scale-105 group">
+                            <span>Pesan Alfazh Sekarang</span>
+                        </a>
+                    </div>
+                    <img src="/assets/product_tajwid.png" alt="Produk Al Quran Tajwid Praktis Plus Audio Per Ayat" class="w-full h-auto mx-auto" loading="lazy">
                 </div>
-                <p class="text-2xl font-bold">Sekarang hanya</p>
-                <p class="text-2xl font-bold text-amber-700">Rp99.000</p>
             </div>
-            <h3 class="text-gray-500 text-base font-normal">
-                Sekali beli, bisa digunakan berulang untuk belajar mandiri dengan lebih terarah.
-            </h3>
-            <div class="flex w-full gap-4 mt-5">
-                <a href="https://wa.me/+628139871659?text=Assalamualaikum, mohon info pembelian produk Alfazh Al-Qur'an" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</a>
-                <!-- <button command="show-modal" commandfor="dialog" class="w-full border border-yellow-700 bg-yellow-700/80 text-white font-bold text-lg py-3 px-2 rounded-xl hover:bg-yellow-600 transition">Pesan Sekarang</button>
-                
-                <a href="https://catalog.umrona.com" class="w-full border border-amber-700 font-bold text-amber-700 text-lg py-3 px-2 rounded-xl hover:bg-yellow-50 transition">
-                    Mulai Belajar
-                </a> -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <img src="/assets/product_tajwid2.png" alt="Produk Tajwid" class="h-full w-full object-cover">
-    
-    <section class="flex flex-col items-center text-center pt-10">
-        <div class="relative w-full py-16 px-4 bg-cover bg-center bg-no-repeat" 
-        style="background-image: url('/assets/img_bg.png');">
-        
-            <div class="absolute inset-0 bg-black/60"></div>
-            
-            <div class="relative z-10 flex flex-col items-center justify-center text-center text-white max-w-md mx-auto">
-                <h2 class="text-2xl font-bold mb-3 leading-tight">
-                    Jangan tunda <br> niat baik ini lebih lama.
-                </h2>
-                <p class="text-sm font-light text-gray-100 opacity-90 px-4">
-                    Mulai belajar membaca Al-Qur’an dengan cara yang lebih jelas dan nyaman.
-                </p>
+        <footer class="bg-[#B7831F] text-white py-5 text-center">
+            <div class="container flex justify-between items-center px-5">
+                <p class="text-xs">&copy; 2026 Alfazh Quran. All rights reserved.</p>
+                <div class="flex gap-3 text-sm">
+                    <a href="https://catalog.umrona.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cream transition-colors" aria-label="Website Umrona">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61585745481589" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cream transition-colors" aria-label="Facebook Alfazh">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alfazh_official/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cream transition-colors" aria-label="Instagram Alfazh">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="flex flex-col items-center text-center py-4 bg-yellow-700/80">
-        <div class="max-w-md mx-auto w-full flex flex-col">
-            <p class="text-white text-base font-normal">© 2026 | All rights Reserved</p>
-            <div class="flex w-full gap-2 justify-center items-center">
-                <a href="https://catalog.umrona.com">
-                    <img src="/assets/icon-browser.png" alt="Icon Browser" class="h-10 w-10">
-                </a>
-                <a href="https://www.instagram.com/alfazh_official/">
-                    <img src="/assets/icon-ig.png" alt="Icon Instagram" class="h-10 w-10">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61585745481589">
-                    <img src="/assets/icon-fb.png" alt="Icon Facebook" class="h-10 w-10">
-                </a>
-            </div>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -336,11 +292,29 @@
                 clickable: true,
             },
             autoplay: {
-                delay: 3000,
+                delay: 7000,
                 disableOnInteraction: false,
             },
         });
-    </script>
 
+        var swiper = new Swiper(".appSS", {
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: -210,
+            allowTouchMove: true, 
+            freeMode: true,
+            loop: true, 
+            speed: 11000, 
+            autoplay: {
+                delay: 0, // 3. Set delay ke 0 agar langsung jalan
+                disableOnInteraction: false,
+            },
+            freeMode: {
+                enabled: true,
+                momentum: false,
+            },
+        });
+    </script>
 </body>
 </html>
